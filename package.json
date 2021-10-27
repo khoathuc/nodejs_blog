@@ -2,9 +2,10 @@
   "name": "node-basic",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
-    "start": "nodemon app.js", 
+    "beautiful": "prettier --single-quote --trailing-comma all --write 'src/**/*.{js,json}'",
+    "start": "nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,9 +25,15 @@
   },
   "homepage": "https://github.com/khoathuc/nodejs_blog#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.4",
+    "mysql2": "^2.3.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.13"
+    "husky": "^7.0.4",
+    "lint-staged": "^11.2.6",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.13",
+    "prettier": "^2.4.1"
   }
 }
